@@ -26,8 +26,28 @@ document.addEventListener('DOMContentLoaded', () => {
   // ----- Product grid rendered from JS array -----
   const productGrid = document.getElementById('product-grid');
 
-  // Read product data from separate data file (products.js)
-  const products = Array.isArray(window.SX_PRODUCTS) ? window.SX_PRODUCTS : [];
+  const products = [
+    {
+      tag: 'Full-Stack',
+      name: 'Full-Stack eCommerce Starter Kit',
+      price: '₹11,999',
+      description:
+        'Full-Stack Application – deploy a complete store in hours, not weeks.',
+      detailsUrl: 'full-stack-starter-kit.html',
+      buttonStyle: 'primary',
+      dataProduct: 'Full-Stack eCommerce Starter Kit',
+    },
+    {
+      tag: 'Plugin',
+      name: 'Adsense Eligibility Checker – WordPress Plugin',
+      price: '₹50',
+      description:
+        'A lightweight WordPress plugin that checks whether your website meets basic Google AdSense eligibility requirements.',
+      detailsUrl: 'adsense-eligibility-checker.html',
+      buttonStyle: 'primary',
+      dataProduct: 'Adsense Eligibility Checker – WordPress Plugin',
+    },
+  ];
 
   if (productGrid) {
     productGrid.innerHTML = products
