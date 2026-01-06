@@ -1,0 +1,8 @@
+# robots.txt for https://rohitbhure65.github.io/streamx24-digital-market-place
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://rohitbhure65.github.io/streamx24-digital-market-place/sitemap.xml
+
