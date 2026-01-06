@@ -77,16 +77,38 @@
                             </div>
                         </div>
                         <div class="sx-card-product-preview">
-                            <h3>Full-Stack eCommerce Starter Kit</h3>
+                            <h3>
+                                <a href="full-stack-starter-kit.html">
+                                    Full-Stack eCommerce Starter Kit
+                                </a>
+                            </h3>
                             <p>
                                 Full-Stack Application – deploy a complete
                                 store in hours, not weeks.
                             </p>
                             <p class="sx-price-tag">₹11,999</p>
-                            <button class="sx-btn sx-btn-primary sx-buy-btn"
-                                data-product="Full-Stack eCommerce Starter Kit">
-                                Buy Now on WhatsApp
-                            </button>
+                            <div class="sx-card-actions">
+                                <a href="full-stack-starter-kit.html" class="sx-btn sx-btn-ghost"
+                                    aria-label="View details for Full-Stack eCommerce Starter Kit">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path
+                                            d="M12 5C7 5 3.3 8.1 2 12c1.3 3.9 5 7 10 7s8.7-3.1 10-7c-1.3-3.9-5-7-10-7zm0 11a4 4 0 1 1 0-8 4 4 0 0 1 0 8z">
+                                        </path>
+                                        <circle cx="12" cy="12" r="2.3"></circle>
+                                    </svg>
+                                </a>
+                                <button class="sx-btn sx-btn-primary sx-buy-btn"
+                                    data-product="Full-Stack eCommerce Starter Kit"
+                                    aria-label="Buy Full-Stack eCommerce Starter Kit now on WhatsApp">
+                                    <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                                        <path
+                                            d="M7 4h-.8a1 1 0 0 0 0 2H8l1.1 8.2A2.5 2.5 0 0 0 11.6 16h6.2a1 1 0 0 0 0-2h-6.2l-.2-1.5h7.2a1.5 1.5 0 0 0 1.4-1.1l1-4A1 1 0 0 0 20 6H9.2L9 4.8A1.5 1.5 0 0 0 7.5 4H7z">
+                                        </path>
+                                        <circle cx="10" cy="19" r="1.4"></circle>
+                                        <circle cx="17" cy="19" r="1.4"></circle>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -103,31 +125,9 @@
                     </p>
                 </div>
 
-                <div class="sx-product-grid">
-    <article class="sx-product-card">
-        <div class="sx-product-tag">Plugin</div>
-
-        <h3 class="sx-product-name">
-            Adsense Eligibility Checker – WordPress Plugin
-        </h3>
-
-        <p class="sx-product-desc">
-            A lightweight WordPress plugin that checks whether your website meets
-            basic Google AdSense eligibility requirements. It analyzes essential
-            on-page SEO factors, content structure, and common approval criteria
-            to help reduce AdSense rejection chances.
-        </p>
-
-        <div class="sx-product-meta">
-            <span class="sx-price">₹50</span>
-
-            <button class="sx-btn sx-btn-secondary sx-buy-btn"
-                data-product="Adsense Eligibility Checker – WordPress Plugin">
-                Buy Now
-            </button>
-        </div>
-    </article>
-</div>
+                <div class="sx-product-grid" id="product-grid">
+                    <!-- Products will be rendered via JavaScript -->
+                </div>
             </div>
         </section>
 
@@ -181,6 +181,8 @@
         </div>
     </footer>
 
+    <!-- Product data (must come before main.js so data is available) -->
+    <script src="assets/js/products.js"></script>
     <script src="assets/js/main.js"></script>
 </body>
 
