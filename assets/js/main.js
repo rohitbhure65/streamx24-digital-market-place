@@ -23,6 +23,54 @@ document.addEventListener('DOMContentLoaded', () => {
     yearSpan.textContent = String(new Date().getFullYear());
   }
 
+  // Limited-time offer countdown timers (supports duration in hours)
+  const timerEls = document.querySelectorAll('.sx-offer-timer');
+
+  if (timerEls.length > 0) {
+    const updateTimers = () => {
+      const now = Date.now();
+
+      timerEls.forEach((el) => {
+        // Prefer duration-based timers for simplicity (e.g., 9 hours)
+        const durationHoursAttr = el.getAttribute('data-duration-hours');
+        let target;
+
+        if (durationHoursAttr) {
+          const stored = el.getAttribute('data-target-ts');
+          if (stored) {
+            target = Number(stored);
+          } else {
+            const hours = Number(durationHoursAttr) || 0;
+            target = now + hours * 60 * 60 * 1000;
+            el.setAttribute('data-target-ts', String(target));
+          }
+        } else {
+          const deadlineStr = el.getAttribute('data-deadline');
+          if (!deadlineStr) return;
+          target = Date.parse(deadlineStr);
+          if (Number.isNaN(target)) return;
+        }
+
+        let diff = target - now;
+        if (diff <= 0) {
+          el.textContent = '00d 00h 00m 00s';
+          return;
+        }
+
+        const totalSeconds = Math.floor(diff / 1000);
+        const hours = Math.floor(totalSeconds / (60 * 60));
+        const minutes = Math.floor((totalSeconds / 60) % 60);
+        const seconds = totalSeconds % 60;
+
+        const pad = (n) => String(n).padStart(2, '0');
+        el.textContent = `${pad(hours)}h ${pad(minutes)}m ${pad(seconds)}s`;
+      });
+    };
+
+    updateTimers();
+    setInterval(updateTimers, 1000);
+  }
+
   // WhatsApp Buy Now buttons
   const buyButtons = document.querySelectorAll('.sx-buy-btn');
   const whatsappNumber = '918839178090'; // Country code + number
