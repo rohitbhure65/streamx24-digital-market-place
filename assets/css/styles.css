@@ -508,8 +508,17 @@ main {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 0.35rem;
+  gap: 0.5rem;
   flex-wrap: wrap;
+}
+
+.sx-product-meta > div:last-child {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sx-product-meta .sx-btn {
+  padding: 0.55rem 0.85rem;
 }
 
 .sx-price {
@@ -641,8 +650,14 @@ main {
 /* Hero card actions (View Details + Buy Now) */
 .sx-card-actions {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 0.5rem;
+}
+
+.sx-card-actions .sx-btn {
+  flex: 1;
+  padding: 0.65rem 0.85rem;
+  font-size: 0.85rem;
 }
 
 .sx-grid-2 {
@@ -932,24 +947,73 @@ main {
   }
 
   .sx-card-actions {
-    flex-direction: column;
-    align-items: stretch;
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+  }
+
+  .sx-card-actions .sx-btn {
+    flex: 1;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
   }
 
   .sx-product-meta {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-rows: auto auto;
+    gap: 0.65rem;
     align-items: center;
-    flex-direction: column;
+    width: 100%;
+  }
+
+  .sx-product-meta .sx-price-row {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-content: center;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.2);
+    margin-bottom: 0.15rem;
+  }
+
+  .sx-product-meta > div:last-child {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    display: flex;
+    gap: 0.5rem;
+    width: 100%;
   }
 
   .sx-product-meta .sx-btn {
-    width: 100%;
+    flex: 1;
     justify-content: center;
-    margin-top: 0.25rem;
+    padding: 0.65rem 0.85rem;
+    font-size: 0.85rem;
   }
 
   .sx-product-meta .sx-price {
-    width: 100%;
+    width: auto;
     text-align: center;
+  }
+
+  /* Product detail page pricing card mobile styles */
+  .sx-highlight-card {
+    padding: 1.1rem 1rem;
+    margin-top: 1rem;
+  }
+
+  .sx-highlight-card .sx-btn {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+  }
+
+  .sx-highlight-card .sx-price-tag {
+    font-size: 1.5rem;
+    text-align: center;
+    display: block;
+    margin: 0.75rem 0;
   }
 
   .sx-offer-banner {
