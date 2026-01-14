@@ -1103,3 +1103,74 @@ main {
     padding: 0.3rem 0.65rem;
   }
 }
+
+/* Custom Scrollbar for Table Container */
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #3b82f6 #e5e7eb;
+}
+
+.custom-scrollbar::-webkit-scrollbar {
+  height: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: #e5e7eb;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #3b82f6;
+  border-radius: 4px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: #2563eb;
+}
+
+/* Responsive Table Improvements */
+@media (max-width: 768px) {
+  .overflow-x-auto.custom-scrollbar {
+    position: relative;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .overflow-x-auto.custom-scrollbar::before,
+  .overflow-x-auto.custom-scrollbar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 20px;
+    z-index: 1;
+    pointer-events: none;
+  }
+  
+  .overflow-x-auto.custom-scrollbar::before {
+    left: 0;
+    background: linear-gradient(to right, rgba(255,255,255,0.9), transparent);
+  }
+  
+  .overflow-x-auto.custom-scrollbar::after {
+    right: 0;
+    background: linear-gradient(to left, rgba(255,255,255,0.9), transparent);
+  }
+}
+
+/* Mobile responsive table cell padding */
+@media (max-width: 640px) {
+  table td,
+  table th {
+    padding: 0.75rem 0.5rem !important;
+    font-size: 0.75rem !important;
+  }
+  
+  table button {
+    padding: 0.5rem 0.75rem !important;
+    font-size: 0.75rem !important;
+  }
+}
