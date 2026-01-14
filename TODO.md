@@ -1,40 +1,41 @@
-# Task: Fix Responsive Issues on Pricing Pages
+# TODO - Nav Bar & Google Analytics Update
 
-## Issue Summary
-- static.html, dynamic.html, and seo.html have non-responsive titles and pricing tables
-- Tables are too wide for mobile layouts
-- Some HTML typos present (e.g., "text-black" appearing in content)
+## Task 1: Update Navigation Bar (add Pricing link) in all HTML files
 
-## Completed Changes
+- [x] index.html - add Pricing link, set Home active
+- [x] about.html - add Pricing link, set About active
+- [x] contact.html - add Pricing link, set Contact active
+- [x] pricing.html - set Pricing active (already has Pricing)
+- [x] privacy.html - add Pricing link, set Privacy active
+- [x] terms.html - add Pricing link, set Terms active
+- [x] static.html - add Pricing link, set Terms active
+- [x] dynamic.html - add Pricing link, set Terms active
+- [x] seo.html - add Pricing link, set Terms active
+- [x] adsense-eligibility-checker.html - add Pricing link, set Terms active
+- [x] full-stack-starter-kit.html - add Pricing link, set Terms active
 
-### ✅ static.html - Fixed:
-- [x] Made title responsive with `text-3xl md:text-4xl` and `text-white` for dark theme
-- [x] Made description text responsive with `text-sm md:text-base` and `text-gray-400`
-- [x] Made pricing table responsive with horizontal scroll wrapper
-- [x] Fixed HTML typos ("text-black" artifacts removed)
+## Task 2: Add Google Analytics to files missing it
 
-### ✅ dynamic.html - Fixed:
-- [x] Made title responsive with `text-3xl md:text-4xl` and `text-white`
-- [x] Made description text responsive with `text-sm md:text-base` and `text-gray-400`
-- [x] Made pricing table responsive with horizontal scroll wrapper
-- [x] Fixed HTML typos
+- [x] about.html - add GA
+- [x] contact.html - add GA
+- [x] privacy.html - add GA
+- [x] terms.html - add GA
+- [x] adsense-eligibility-checker.html - add GA
+- [x] full-stack-starter-kit.html - add GA
 
-### ✅ seo.html - Fixed:
-- [x] Made title responsive with `text-3xl md:text-4xl` and `text-white`
-- [x] Made description text responsive with `text-sm md:text-base` and `text-gray-400`
-- [x] Made pricing table responsive with horizontal scroll wrapper
-- [x] Ensured proper mobile spacing
+## Google Analytics Script to Add:
+```html
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1G1G7PLGC"></script>
+<script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-### ✅ Common Improvements Added:
-- [x] Added responsive padding/margins for mobile (`-mx-2 md:mx-0`)
-- [x] Added horizontal scroll indicator with custom scrollbar styling
-- [x] Added gradient fade indicators on mobile to show scrollable content
-- [x] Added responsive table cell padding for mobile (`@media (max-width: 640px)`)
-- [x] Added minimum width wrapper for tables to ensure proper scrolling on mobile
+    gtag('config', 'G-P1G1G7PLGC');
+</script>
+```
 
-## Files Edited:
-- /home/rohit/Desktop/streamx24/static.html
-- /home/rohit/Desktop/streamx24/dynamic.html
-- /home/rohit/Desktop/streamx24/seo.html
-- /home/rohit/Desktop/streamx24/assets/css/styles.css
+## ✅ ALL TASKS COMPLETED
+
 
