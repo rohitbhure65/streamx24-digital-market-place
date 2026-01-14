@@ -73,7 +73,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // WhatsApp Buy Now buttons
   const buyButtons = document.querySelectorAll('.sx-buy-btn');
-  const whatsappNumber = '918839178090'; // Country code + number
+  const whatsappNumber = '917566689553'; // Country code + number
 
   const buildWhatsAppUrl = (productName) => {
     const base = 'https://wa.me/';
