@@ -90,6 +90,79 @@ document.addEventListener('DOMContentLoaded', () => {
       window.open(url, '_blank');
     });
   });
+
+  // WhatsApp Get Quote buttons for pricing tables
+  const quoteButtons = document.querySelectorAll('.get-quote-btn');
+
+  quoteButtons.forEach((button) => {
+    button.addEventListener('click', function () {
+      const serviceName = this.getAttribute('data-service') || 'Service';
+      const planName = this.getAttribute('data-plan') || 'Plan';
+      const price = this.getAttribute('data-price') || '';
+      const tableId = this.getAttribute('data-table');
+
+      // Collect all features from the table for this plan column
+      let featuresList = [];
+      const table = document.getElementById(tableId);
+
+      if (table) {
+        // Find which column this button is in (td index)
+        const buttonCell = this.closest('td');
+        const cells = table.querySelectorAll('tbody td');
+        const headers = table.querySelectorAll('tbody tr:first-child td');
+
+        // Find column index
+        let colIndex = -1;
+        cells.forEach((cell, index) => {
+          if (cell === buttonCell || cell.contains(button)) {
+            // Calculate the actual column index based on the cell position
+            // Account for the first column being feature names
+            const row = this.closest('tr');
+            const rowCells = row.querySelectorAll('td');
+            rowCells.forEach((rc, idx) => {
+              if (rc === buttonCell) {
+                colIndex = idx;
+              }
+            });
+          }
+        });
+
+        // Get all feature rows (all rows except the last one with buttons)
+        const featureRows = table.querySelectorAll('tbody tr:not(:last-child)');
+
+        featureRows.forEach((row) => {
+          const cells = row.querySelectorAll('td');
+          if (cells.length > 1) {
+            const featureName = cells[0].textContent.trim();
+            // Get value from the button's column (colIndex)
+            if (cells[colIndex]) {
+              const featureValue = cells[colIndex].textContent.trim();
+              if (featureName && featureValue) {
+                featuresList.push(`- ${featureName}: ${featureValue}`);
+              }
+            }
+          }
+        });
+      }
+
+      // Build the message
+      let message = `Hello StreamX24,\n\n`;
+      message += `I'm interested in the ${serviceName} - ${planName}.\n\n`;
+      message += `Plan Details:\n`;
+      if (price) {
+        message += `- Price: ${price}\n`;
+      }
+      featuresList.forEach(feature => {
+        message += `${feature}\n`;
+      });
+      message += `\nPlease provide more information.\n\nThank you!`;
+
+      // Encode and redirect
+      const encodedMessage = encodeURIComponent(message);
+      const waUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      window.open(waUrl, '_blank');
+    });
+  });
 });
 
 

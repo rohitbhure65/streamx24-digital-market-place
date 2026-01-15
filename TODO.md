@@ -1,41 +1,75 @@
-# TODO - Nav Bar & Google Analytics Update
+# WhatsApp Get Quote Implementation
 
-## Task 1: Update Navigation Bar (add Pricing link) in all HTML files
+## Task
 
-- [x] index.html - add Pricing link, set Home active
-- [x] about.html - add Pricing link, set About active
-- [x] contact.html - add Pricing link, set Contact active
-- [x] pricing.html - set Pricing active (already has Pricing)
-- [x] privacy.html - add Pricing link, set Privacy active
-- [x] terms.html - add Pricing link, set Terms active
-- [x] static.html - add Pricing link, set Terms active
-- [x] dynamic.html - add Pricing link, set Terms active
-- [x] seo.html - add Pricing link, set Terms active
-- [x] adsense-eligibility-checker.html - add Pricing link, set Terms active
-- [x] full-stack-starter-kit.html - add Pricing link, set Terms active
+Implement "Get Quote" button functionality that redirects to WhatsApp with formatted plan details.
 
-## Task 2: Add Google Analytics to files missing it
+## Files to Modify
 
-- [x] about.html - add GA
-- [x] contact.html - add GA
-- [x] privacy.html - add GA
-- [x] terms.html - add GA
-- [x] adsense-eligibility-checker.html - add GA
-- [x] full-stack-starter-kit.html - add GA
+1. `assets/js/main.js` - Add WhatsApp redirect function
+2. `seo.html` - Add data attributes and click handlers to 3 buttons
+3. `dynamic.html` - Add data attributes and click handlers to 5 buttons
+4. `cmss.html` - Add data attributes and click handlers to 4 buttons
+5. `static.html` - Add data attributes and click handlers to 5 buttons
+6. `custom.html` - Add data attributes and click handlers to 4 buttons
 
-## Google Analytics Script to Add:
-```html
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-P1G1G7PLGC"></script>
-<script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
+## Implementation Steps
 
-    gtag('config', 'G-P1G1G7PLGC');
-</script>
+- [x] 1. Add WhatsApp redirect JavaScript function to main.js
+- [x] 2. Modify seo.html - Add data attributes and click handlers
+- [x] 3. Modify dynamic.html - Add data attributes and click handlers
+- [x] 4. Modify cmss.html - Add data attributes and click handlers
+- [x] 5. Modify static.html - Add data attributes and click handlers
+- [x] 6. Modify custom.html - Add data attributes and click handlers
+
+## WhatsApp Number
+
++91 75666 89553
+
+## Message Format
+
+```
+Hello StreamX24,
+
+I'm interested in the {SERVICE_NAME} - {PLAN_NAME}.
+
+Plan Details:
+- Price: {PRICE}
+{FEATURE_ROWS}
+
+Please provide more information.
+
+Thank you!
 ```
 
-## ✅ ALL TASKS COMPLETED
+## Example Output
 
+When clicking "Get Quote" for the SEO Basic Plan, the user will see a WhatsApp message like:
 
+```
+Hello StreamX24,
+
+I'm interested in the SEO Services - Basic Plan.
+
+Plan Details:
+- Price: ₹8,000/-
+- Target Area: City
+- No. of Keywords: 10
+- Website Audit: ✓
+- Keyword Research: ✓
+- On-Page Optimization: ✓
+- Image Optimization: ✓
+- Page Speed Optimization: -
+- Google Analytics Setup: ✓
+- Search Console Setup: ✓
+- Blog Submission: ✓
+- Directory Submission: ✓
+- Social Bookmarking: ✓
+- Video Promotion: -
+- Infographic Submission: -
+- Monthly Reports: ✓
+
+Please provide more information.
+
+Thank you!
+```
