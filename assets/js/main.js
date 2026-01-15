@@ -119,8 +119,8 @@ document.addEventListener('DOMContentLoaded', () => {
           }
         });
 
-        // Get all feature rows (skip category header rows and button row)
-        const featureRows = table.querySelectorAll('tbody tr:not(.bg-orange-100):not(.bg-gray-100)');
+        // Get all feature rows (skip button row and rows with colspan)
+        const featureRows = table.querySelectorAll('tbody tr:not(.bg-gray-100)');
 
         featureRows.forEach((row) => {
           const cells = row.querySelectorAll('td');
@@ -129,7 +129,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // Get value from the button's column (colIndex)
             if (colIndex > 0 && cells[colIndex]) {
               const featureValue = cells[colIndex].textContent.trim();
-              if (featureName && featureValue && featureValue !== '-') {
+              if (featureName && featureValue && featureValue !== '-' && featureValue !== '₹500 per page') {
                 featuresList.push(`• ${featureName}: ${featureValue}`);
               }
             }
