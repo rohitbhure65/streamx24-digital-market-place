@@ -302,8 +302,8 @@ main {
 }
 
 .sx-chip-blue {
-  border-color: rgba(37, 99, 235, 0.9);
-  background: rgba(37, 99, 235, 0.18);
+  border-color: rgba(235, 37, 37, 0.9);
+  background: rgba(235, 37, 37, 0.18);
 }
 
 .sx-metrics {
