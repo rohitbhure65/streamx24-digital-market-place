@@ -25,6 +25,10 @@
   box-sizing: border-box;
 }
 
+#wa_btn-content{
+  border: 1px solid white;
+}
+
 html,
 body {
   margin: 0;
