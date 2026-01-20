@@ -1254,3 +1254,27 @@ main {
     white-space: nowrap;
   }
 }
+
+/* Portfolio Card Hover Effects */
+.portfolio-card-hover {
+  transition: all 0.3s ease;
+}
+
+.portfolio-card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+.portfolio-card-hover .group-hover\:text-blue-600 {
+  color: #2563eb;
+}
+
+/* Project Card Styles for Projects Page */
+.project-card {
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
