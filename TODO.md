@@ -1,60 +1,36 @@
-# SEO Table Update - TODO List
+# Task: Add "Free Basic Revision – 3 Times" below pricing tables on all pages
 
-## Task: Add missing features to SEO pricing table
+## Pages with Pricing Tables (to be modified):
+1. static.html
+2. dynamic.html
+3. seo.html
+4. cmss.html
+5. custom.html
 
-### Missing Features to Add:
+## Implementation Plan:
+1. Add a styled div with "Free Basic Revision – 3 Times" text immediately after each pricing table's closing </table> tag
+2. Place it within the same table container div (overflow-x-auto)
+3. Style it with appropriate visual prominence (yellow/amber background to stand out)
+4. Maintain consistent styling across all pages
 
-#### On-Page SEO & Technical:
+## Changes per file:
+- Location: Right after `</table>` tag and before closing `</div>` of the table container
+- Styling: Yellow/Amber background with dark text, rounded corners, centered text
+- Text: "Free Basic Revision – 3 Times"
 
-- [x] CSS Optimization
-- [x] Sitemap Submission
-- [x] Robots.txt Submission
-- [x] Internal Hyperlinks
-- [x] Meta Tags Creation & Upload
-- [x] URL Rewriting (if required)
-- [x] HTML Validation
-- [x] Search Engine Submission
+## Status:
+- [x] Modify static.html - Added as table row inside tbody
+- [x] Modify dynamic.html - Added as table row inside tbody
+- [x] Modify seo.html - Added as table row inside tbody
+- [x] Modify cmss.html - Added as table row inside tbody
+- [x] Modify custom.html - Added as table row inside tbody
 
-#### Off-Page SEO & Promotion:
+## All tasks completed! ✅
 
-- [x] Profile Submission
-- [x] Blog Creation
-- [x] Blog Comment & Guest Blogging
-- [x] Classified Ads
-- [x] Business Listing
-- [x] Image Sharing & Submission
-- [x] Blog Promotion
-- [x] Article Submission
-- [x] Press Release Submission
+## Implementation Details:
+- Added "Free Basic Revision – 3 Times" as a table row (<tr>) inside the <tbody> section
+- Styled with yellow background (bg-yellow-50) and yellow-800 text for visibility
+- Spans all columns using colspan
+- Positioned above the "Get Started" buttons row
+- Consistent across all 5 pricing pages
 
-#### Extra Marketing:
-
-- [x] Q&A Participation
-
-#### Reports:
-
-- [x] Competitor Analysis Reports
-- [x] Keyword Ranking Reports
-
-### Progress:
-
-- [x] Create TODO.md file
-- [x] Edit seo.html to add all missing features
-- [ ] Verify table renders correctly
-- [ ] Test "Get Quote" buttons functionality
-
----
-
-## ✅ COMPLETED - All missing features added successfully!
-
-### Features Added:
-
-1. **On-Page SEO (8 new rows)**: CSS Optimization, Sitemap Submission, Robots.txt Submission, Internal Hyperlinks, Meta Tags Creation & Upload, URL Rewriting, HTML Validation, Search Engine Submission
-
-2. **Off-Page SEO (9 new rows)**: Profile Submission, Blog Creation, Blog Comment & Guest Blogging, Classified Ads, Business Listing, Image Sharing & Submission, Blog Promotion, Article Submission, Press Release Submission
-
-3. **Extra Marketing (1 new row)**: Q&A Participation (Basic: -, Business: 2 Websites, Professional: 5 Websites)
-
-4. **Reports (2 new rows)**: Competitor Analysis Reports, Keyword Ranking Reports
-
-**Total: 20 new feature rows added to the SEO pricing table**
